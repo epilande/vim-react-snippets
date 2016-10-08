@@ -1,0 +1,146 @@
+priority 100
+
+snippet c "const" b
+const ${1} = ${2:'$1'};
+endsnippet
+
+snippet l "let" b
+let ${1} = ${2:'$1'};
+endsnippet
+
+snippet "i(mport|mp|m)?" "import" br
+import ${1} from '${2:./}${3:$1}';
+endsnippet
+
+snippet e "export" b
+export ${1:default }
+endsnippet
+
+snippet ie "Import file then export" b
+import ${1} from '${2:./}${3:$1}';
+
+export ${4:default} $1;
+endsnippet
+
+snippet r "return"
+return ${0:result;}
+endsnippet
+
+snippet : "Object Value JS"
+${1:key}: ${0:value},
+endsnippet
+
+snippet :f "method: func(...) { ... }"
+${1:method_name}: function (${2:args}) {
+	return ${3};
+}
+endsnippet
+
+snippet "\.(map|filter|forEach|reduce)" "Array method with an arrow function" r
+.`!p snip.rv = match.group(1)`(${1:(c, i)} => {
+	return $2;
+});
+endsnippet
+
+snippet "\.(map|filter|forEach|reduce)=" "Array method with an arrow function inline" r
+.`!p snip.rv = match.group(1)`(${1:(c, i)} => $2);
+endsnippet
+
+snippet =>
+(${1:args}) => {
+	return ${3};
+}${2:;}
+endsnippet
+
+snippet =>> "Inline"
+(${1:args}) => (${3});
+endsnippet
+
+
+# React & JSX
+snippet rrcc "React Redux Class Component" b
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import styles from './${1:`!v expand('%:t:r')`}.css';
+
+class $1 extends Component {
+	static propTypes = {
+		dispatch: PropTypes.func.isRequired,
+	};
+
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div className={styles.base}>
+				${2}
+			</div>
+		);
+	}
+}
+
+function mapStateToProps(state) {
+	return {};
+}
+
+export default connect(mapStateToProps)($1);
+endsnippet
+
+snippet rcc "React Class Component" b
+import React, { Component, PropTypes } from 'react';
+import styles from './${1:`!v expand('%:t:r')`}.css';
+
+class $1 extends Component {
+	static propTypes = {
+	};
+
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div className={styles.base}>
+				${2}
+			</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet rsc "React Stateless Component" b
+import React, { PropTypes } from 'react';
+import styles from './${1:`!v expand('%:t:r')`}.css';
+
+const $1 = ({ ${2:...props} }) => (
+	<div className={styles.base}>
+		$3
+	</div>
+);
+
+$1.defaultProps = {
+};
+
+$1.propTypes = {
+};
+
+export default $1;
+endsnippet
+
+snippet cn "className"
+className="${1}"
+endsnippet
+
+
+
+snippet cl "console.log(...)" b
+console.log('${2:$1: }', ${1});
+endsnippet
+
+snippet al "alert(...)" b
+alert(${1});
+endsnippet
