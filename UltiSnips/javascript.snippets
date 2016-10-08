@@ -1,10 +1,10 @@
 priority 100
 
-snippet c "const" b
+snippet "c(onst)?" "const" br
 const ${1} = ${2:'$1'};
 endsnippet
 
-snippet l "let" b
+snippet "l(et)?" "let" br
 let ${1} = ${2:'$1'};
 endsnippet
 
@@ -12,8 +12,8 @@ snippet "i(mport|mp|m)?" "import" br
 import ${1} from '${2:./}${3:$1}';
 endsnippet
 
-snippet e "export" b
-export ${1:default }
+snippet "e(xport|xp|x)?" "export" br
+export ${1:default };
 endsnippet
 
 snippet ie "Import file then export" b
@@ -31,9 +31,9 @@ ${1:key}: ${0:value},
 endsnippet
 
 snippet :f "method: func(...) { ... }"
-${1:method_name}: function (${2:args}) {
-	return ${3};
-}
+${1:key}: ${2:(args)} => {
+	return ${4};
+}${3:;}
 endsnippet
 
 snippet "\.(map|filter|forEach|reduce)" "Array method with an arrow function" r
@@ -56,15 +56,23 @@ snippet =>> "Inline"
 (${1:args}) => (${3});
 endsnippet
 
+snippet expf "Export function" b
+export ${1:default }function($2) {
+	$3
+};
+endsnippet
+
 
 # React & JSX
 snippet rrcc "React Redux Class Component" b
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import styles from './${1:`!v expand('%:t:r')`}.css';
+import styles from './${2:$1}.css';
 
-class $1 extends Component {
+class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
+		children: PropTypes.node,
+		className: PropTypes.string,
 		dispatch: PropTypes.func.isRequired,
 	};
 
@@ -75,7 +83,7 @@ class $1 extends Component {
 	render() {
 		return (
 			<div className={styles.base}>
-				${2}
+				${3}
 			</div>
 		);
 	}
@@ -90,10 +98,12 @@ endsnippet
 
 snippet rcc "React Class Component" b
 import React, { Component, PropTypes } from 'react';
-import styles from './${1:`!v expand('%:t:r')`}.css';
+import styles from './${2:$1}.css';
 
-class $1 extends Component {
+class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
+		children: PropTypes.node,
+		className: PropTypes.string,
 	};
 
 	constructor(props) {
@@ -103,7 +113,7 @@ class $1 extends Component {
 	render() {
 		return (
 			<div className={styles.base}>
-				${2}
+				${3}
 			</div>
 		);
 	}
@@ -112,13 +122,13 @@ class $1 extends Component {
 export default $1;
 endsnippet
 
-snippet rsc "React Stateless Component" b
+snippet rfc "React Functional Component" b
 import React, { PropTypes } from 'react';
-import styles from './${1:`!v expand('%:t:r')`}.css';
+import styles from './${2:$1}.css';
 
-const $1 = ({ ${2:...props} }) => (
+const ${1:`!v expand('%:t:r')`} = ({ ${3:...props} }) => (
 	<div className={styles.base}>
-		$3
+		$4
 	</div>
 );
 
@@ -131,11 +141,20 @@ $1.propTypes = {
 export default $1;
 endsnippet
 
+
+
 snippet cn "className"
 className="${1}"
 endsnippet
 
-
+snippet class "Class" b
+class ${1:Name} {
+	constructor(${2:arg}) {
+		${3}
+	}
+	${4}
+}
+endsnippet
 
 snippet cl "console.log(...)" b
 console.log('${2:$1: }', ${1});
