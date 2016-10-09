@@ -54,11 +54,30 @@ snippet =>> "Inline arrow function"
 (${1:args}) => ($2);
 endsnippet
 
+snippet c=> "Const Function" b
+const ${1:name} = (${2:args}) => {
+	return $4;
+}${3:;}
+endsnippet
+
 snippet expf "Export function" b
 export ${1:default }function($2) {
 	$3
 };
 endsnippet
+
+snippet fun* "Generator"
+function* ${1:name}($2) {
+	yield $3;
+}
+endsnippet
+
+snippet forof "For of loop" b
+for (let ${1:value} of ${2:iterable}) {
+	${3:$1}
+}
+endsnippet
+
 
 
 # React & JSX
