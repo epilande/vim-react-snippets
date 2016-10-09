@@ -185,12 +185,6 @@ ${1:`!v expand('%:t:r')`.}defaultProps = {
 };
 endsnippet
 
-snippet pt "PropTypes Definition" b
-${1:`!v expand('%:t:r')`.}propTypes = {
-	${2:className}: ${3:PropTypes.string},
-};
-endsnippet
-
 snippet set "Set State"
 this.setState({
 	${1}: ${2}
@@ -247,4 +241,76 @@ snippet cwu "Component Will Unmount" b
 componentWillUnmount() {
 	$1
 }
+endsnippet
+
+
+# PropTypes
+snippet pt "PropTypes Definition" b
+${1:`!v expand('%:t:r')`.}propTypes = {
+	${2:className}: ${3:PropTypes.string},
+};
+endsnippet
+
+snippet  pt.a "PropTypes Array" w
+PropTypes.array${1:,}
+endsnippet
+
+snippet   pt.b "PropTypes Boolean" w
+PropTypes.bool${1:,}
+endsnippet
+
+snippet pt.f "PropTypes Function" w
+PropTypes.func${1:,}
+endsnippet
+
+snippet pt.n "PropTypes Number" w
+PropTypes.number${1:,}
+endsnippet
+
+snippet pt.o "PropTypes Object" w
+PropTypes.object${1:,}
+endsnippet
+
+snippet pt.s "PropType String" w
+PropTypes.string${1:,}
+endsnippet
+
+snippet pt.no "PropTypes Node" w
+PropTypes.node${1:,}
+endsnippet
+
+snippet pt.e "PropTypes Element" w
+PropTypes.element${1:,}
+endsnippet
+
+snippet pt.io "PropTypes instanceOf" w
+PropTypes.instanceOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.one "PropTypes oneOf" w
+PropTypes.oneOf(['$2'$3])${1:,}
+endsnippet
+
+snippet pt.onet "PropTypes oneOfType" w
+PropTypes.oneOfType([
+	$2
+])${1:,}
+endsnippet
+
+snippet pt.ao "PropTypes arrayOf" w
+PropTypes.arrayOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.oo "PropTypes objectOf" w
+PropTypes.objectOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.sh "PropTyes Shape" w
+PropTypes.shape({
+	$2
+})${1:,}
+endsnippet
+
+snippet ir "isRequired" w
+isRequired,
 endsnippet
