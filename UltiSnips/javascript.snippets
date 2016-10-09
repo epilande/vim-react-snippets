@@ -1,4 +1,4 @@
-# ES2015 Snippets
+# ES2015
 snippet "c(onst)?" "const" br
 const ${1} = ${2:'$1'};
 endsnippet
@@ -97,7 +97,7 @@ alert($1);
 endsnippet
 
 
-# React & JSX Snippets
+# React & JSX
 snippet rrcc "React Redux Class Component" b
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
@@ -177,5 +177,17 @@ endsnippet
 
 snippet cn "className"
 className="$1"
+endsnippet
+
+snippet dp "Default Props" b
+${1:`!v expand('%:t:r')`.}defaultProps = {
+	$2
+};
+endsnippet
+
+snippet pt "PropTypes Definition" b
+${1:`!v expand('%:t:r')`.}propTypes = {
+	${2:className}: ${3:PropTypes.string},
+};
 endsnippet
 
