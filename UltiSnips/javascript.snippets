@@ -1,3 +1,4 @@
+# ES2015 Snippets
 snippet "c(onst)?" "const" br
 const ${1} = ${2:'$1'};
 endsnippet
@@ -40,7 +41,7 @@ snippet "\.(map|filter|forEach|reduce)" "Array method with an arrow function" r
 });
 endsnippet
 
-snippet "\.(map|filter|forEach|reduce)=" "Array method with an arrow function inline" r
+snippet "\.(map|filter|forEach|reduce)=" "Array method with an arrow function inline" rA
 .`!p snip.rv = match.group(1)`(${1:(c, i)} => $2);
 endsnippet
 
@@ -50,11 +51,11 @@ snippet => "Arrow function"
 }${2:;}
 endsnippet
 
-snippet =>> "Inline arrow function"
+snippet =>> "Inline arrow function" A
 (${1:args}) => ($2);
 endsnippet
 
-snippet c=> "Const Function" b
+snippet c=> "Const Function" bA
 const ${1:name} = (${2:args}) => {
 	return $4;
 }${3:;}
@@ -78,9 +79,25 @@ for (let ${1:value} of ${2:iterable}) {
 }
 endsnippet
 
+snippet class "Class"
+class ${1:Name} {
+	constructor(${2:arg}) {
+		$3
+	}
+	$4
+}
+endsnippet
+
+snippet cl "console.log(...)"
+console.log('${2:$1: }', ${1});
+endsnippet
+
+snippet al "alert(...)"
+alert($1);
+endsnippet
 
 
-# React & JSX
+# React & JSX Snippets
 snippet rrcc "React Redux Class Component" b
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
@@ -158,25 +175,7 @@ $1.propTypes = {
 export default $1;
 endsnippet
 
-
-
 snippet cn "className"
 className="$1"
 endsnippet
 
-snippet class "Class"
-class ${1:Name} {
-	constructor(${2:arg}) {
-		$3
-	}
-	$4
-}
-endsnippet
-
-snippet cl "console.log(...)"
-console.log('${2:$1: }', ${1});
-endsnippet
-
-snippet al "alert(...)"
-alert($1);
-endsnippet
