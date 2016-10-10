@@ -4,7 +4,7 @@ A Vim snippet library for React in ES6.
 
 Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
-[vim-react-snippets](http://i.imgur.com/ImgaW2k.gifv)
+![vim-react-snippets](http://i.imgur.com/ImgaW2k.gif)
 
 ## Installation
 
@@ -20,37 +20,55 @@ Plug 'SirVer/ultisnips'
 
 ## Snippets
 
+#### Skeleton
+
 | Trigger  | Content |
 | -------: | ------- |
-| `rcc→`   | class component skeleton |
-| `rcc→`   | legacy component skeleton |
-| `cdm→`   | `componentDidMount() {…}` |
-| `cdup→`  | `componentDidUpdate(prevProps, prevState) {…}` |
-| `cwm→`   | `componentWillMount() {…}` |
-| `cwr→`   | `componentWillReceiveProps(nextProps) {…}` |
-| `cwun→`  | `componentWillUnmount() {…}` |
-| `cwup→`  | `componentWillUpdate(nextProps, nextState) {…}` |
-| `fdn→`   | `React.findDOMNode(…)` |
-| `gdp→`   | `getDefaultProps() {…}` |
-| `gis→`   | `getInitialState() {…}` |
-| `ren→`   | `render() {…}` |
-| `sst→`   | `this.setState(…)` |
-| `scu→`   | `shouldComponentUpdate(nextProps, nextState) {…}` |
+| `rrcc→`  | React Redux Class Component |
+| `rcc→`   | React Class Component |
+| `rfc→`   | React Functional Component |
+
+
+#### Lifecycle
+
+| Trigger  | Content |
+| -------: | ------- |
+| `cwm→`   | `componentWillMount() {...}` |
+| `cdm→`   | `componentDidMount() {...}` |
+| `cwrp→`  | `componentWillReceiveProps(nextProps) {...}` |
+| `scup→`  | `shouldComponentUpdate(nextProps, nextState) {...}` |
+| `cwup→`  | `componentWillUpdate(nextProps, nextState) {...}` |
+| `cdup→`  | `componentDidUpdate(prevProps, prevState) {...}` |
+| `cwu→`  | `componentWillUnmount() {...}` |
+
+
+#### PropTypes
+
+| Trigger    | Content |
+| -------:   | ------- |
+| `pt→`      | `propTypes { ... }` |
+| `pt.a→`    | `PropTypes.array` |
+| `pt.b→`    | `PropTypes.bool` |
+| `pt.f→`    | `PropTypes.func` |
+| `pt.n→`    | `PropTypes.number` |
+| `pt.o→`    | `PropTypes.object` |
+| `pt.s→`    | `PropTypes.string` |
+| `pt.no→`   | `PropTypes.node` |
+| `pt.e→`    | `PropTypes.element` |
+| `pt.io→`   | `PropTypes.instanceOf` |
+| `pt.one→`  | `PropTypes.oneOf` |
+| `pt.onet→` | `PropTypes.oneOfType (Union)` |
+| `pt.ao→`   | `PropTypes.arrayOf (Instances)` |
+| `pt.oo→`   | `PropTypes.objectOf` |
+| `pt.sh→`   | `PropTypes.shape` |
+| `ir→`      | `isRequired` |
+
+#### Others
+
+| Trigger  | Content |
+| -------: | ------- |
 | `props→` | `this.props` |
 | `state→` | `this.state` |
-| `pt→`    | `propTypes { ... }` |
-| `pta→`   | `PropTypes.arrayOf` |
-| `ptai→`  | `PropTypes.arrayOf (Instances)` |
-| `ptb→`   | `PropTypes.bool` |
-| `pte→`   | `PropTypes.element` |
-| `ptf→`   | `PropTypes.func` |
-| `pti→`   | `PropTypes.instanceOf` |
-| `ptn→`   | `PropTypes.number` |
-| `ptn→`   | `PropTypes.node` |
-| `pto→`   | `PropTypes.object` |
-| `ptof→`  | `PropTypes.oneOf (Enum)` |
-| `ptof→`  | `PropTypes.objectOf` |
-| `ptoft→` | `PropTypes.oneOfType (Union)` |
-| `pts→`   | `PropTypes.string` |
-| `ptsp→`  | `PropTypes.shape` |
-
+| `set→`   | `this.setState(...)` |
+| `dp→`    | `defaultProps { ... }` |
+| `cn→`    | `className` |
