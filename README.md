@@ -39,14 +39,15 @@ Plug 'SirVer/ultisnips'
 | `scup→`  | `shouldComponentUpdate(nextProps, nextState) {...}` |
 | `cwup→`  | `componentWillUpdate(nextProps, nextState) {...}` |
 | `cdup→`  | `componentDidUpdate(prevProps, prevState) {...}` |
-| `cwu→`  | `componentWillUnmount() {...}` |
+| `cwu→`   | `componentWillUnmount() {...}` |
+| `ren→`   | `render() {...}` |
 
 
 #### PropTypes
 
 | Trigger    | Content |
 | -------:   | ------- |
-| `pt→`      | `propTypes { ... }` |
+| `pt→`      | `propTypes {...}` |
 | `pt.a→`    | `PropTypes.array` |
 | `pt.b→`    | `PropTypes.bool` |
 | `pt.f→`    | `PropTypes.func` |
@@ -70,5 +71,6 @@ Plug 'SirVer/ultisnips'
 | `props→` | `this.props` |
 | `state→` | `this.state` |
 | `set→`   | `this.setState(...)` |
-| `dp→`    | `defaultProps { ... }` |
+| `dp→`    | `defaultProps {...}` |
 | `cn→`    | `className` |
+| `ref→`   | `ref` |

@@ -199,6 +199,10 @@ snippet state "Get State" i
 this.state.${1}
 endsnippet
 
+snippet ref "Ref" i
+ref={${1:ref} => { this.${2:name} = $1; }}
+endsnippet
+
 
 # Component Lifecycle
 snippet cwm "Component Will Mount" b
@@ -240,6 +244,14 @@ endsnippet
 snippet cwu "Component Will Unmount" b
 componentWillUnmount() {
 	$1
+}
+endsnippet
+
+snippet ren "Render"
+render() {
+	return ${1:(
+		${2:<div>${3}</div>}
+	);}
 }
 endsnippet
 
