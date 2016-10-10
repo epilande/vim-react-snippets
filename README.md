@@ -1,6 +1,6 @@
 # Vim React Snippets
 
-A Vim snippet library for React in ES6.
+A Vim snippet library for React in ES6. You may also want to check out [vim-es2015-snippets](https://github.com/epilande/vim-es2015-snippets).
 
 Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
@@ -11,13 +11,16 @@ Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 Using vim-plug:
 
 ```vim
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+
 " React code snippets
 Plug 'epilande/vim-react-snippets'
 
 " Ultisnips
 Plug 'SirVer/ultisnips'
 
-" Trigger configuration (optional)
+" Trigger configuration (Optional)
 " let g:UltiSnipsExpandTrigger="<C-l>"
 ```
 
