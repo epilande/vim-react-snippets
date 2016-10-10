@@ -4,6 +4,8 @@ A Vim snippet library for React in ES6.
 
 Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
+[vim-react-snippets](http://i.imgur.com/ImgaW2k.gifv)
+
 ## Installation
 
 Using vim-plug:
