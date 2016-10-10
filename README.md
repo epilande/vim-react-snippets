@@ -16,7 +16,45 @@ Plug 'epilande/vim-react-snippets'
 
 " Ultisnips
 Plug 'SirVer/ultisnips'
+
+" Trigger configuration (optional)
+" let g:UltiSnipsExpandTrigger="<C-l>"
 ```
+
+## Usage
+In a JavaScript or JSX file, type a trigger name while in Insert mode, then press Ultisnips trigger key. In my case I have it mapped to `<C-l>`.
+
+For example, let's say we have `ListItem.js`
+
+In Insert mode
+
+```javascript
+rcc<C-l>
+```
+
+Will expand to
+
+```javascript
+import React, { PropTypes } from 'react';
+import styles from './ListItem.css';
+
+const ListItem = ({ ...props }) => (
+  <div className={styles.base}>
+
+  </div>
+);
+
+ListItem.defaultProps = {
+};
+
+ListItem.propTypes = {
+};
+
+export default ListItem;
+```
+
+Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to see all snippets.
+
 
 ## Snippets
 
