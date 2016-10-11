@@ -8,7 +8,7 @@ Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
 ## Installation
 
-Using vim-plug:
+Using [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```vim
 " ES2015 code snippets (Optional)
@@ -32,7 +32,7 @@ For example, let's say we have `ListItem.js`
 In Insert mode
 
 ```javascript
-rcc<C-l>
+rfc<C-l>
 ```
 
 Will expand to
