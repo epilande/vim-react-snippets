@@ -61,17 +61,17 @@ snippet rfc "React Functional Component" b
 import React, { PropTypes } from 'react';
 import styles from './${2:$1}.css';
 
-const ${1:`!v expand('%:t:r')`} = ({ ${3:...props} }) => (
-	<div className={styles.base}>
-		$4
-	</div>
-);
+function ${1:`!v expand('%:t:r')`}(${3:{...props}}) {
+	return (
+		<div className={styles.base}>
+			$4
+		</div>
+	);
+}
 
-$1.defaultProps = {
-};
+$1.defaultProps = {};
 
-$1.propTypes = {
-};
+$1.propTypes = {};
 
 export default $1;
 endsnippet
