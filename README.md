@@ -69,6 +69,7 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 | `rcc→`   | React Class Component |
 | `rfc→`   | React Functional Component |
 | `rsc→`   | React Styled Component |
+| `rsci→`   | React Styled Component Interpolation |
 
 
 #### Lifecycle
