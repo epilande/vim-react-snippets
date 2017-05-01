@@ -61,19 +61,45 @@ snippet rfc "React Functional Component" b
 import React, { PropTypes } from 'react';
 import styles from './${2:$1}.css';
 
-const ${1:`!v expand('%:t:r')`} = ({ ${3:...props} }) => (
-	<div className={styles.base}>
-		$4
-	</div>
-);
+function ${1:`!v expand('%:t:r')`}(${3:{...props}}) {
+	return (
+		<div className={styles.base}>
+			$4
+		</div>
+	);
+}
 
-$1.defaultProps = {
-};
+$1.defaultProps = {};
 
-$1.propTypes = {
-};
+$1.propTypes = {};
 
 export default $1;
+endsnippet
+
+snippet rsc "React Styled Component" b
+import styled from 'styled-components';
+
+const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`
+	$3
+\`;
+
+export default $1;
+endsnippet
+
+snippet rsci "React Styled Component Interpolation" b
+import styled, { css } from 'styled-components';
+
+const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`${props => css\`
+	${3:${props.$4 && \`
+		$5
+	\`}}
+\`}\`;
+
+export default $1;
+endsnippet
+
+snippet pp "Get Props"
+${props => props.${1}};
 endsnippet
 
 snippet cn "className"
