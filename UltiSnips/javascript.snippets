@@ -39,8 +39,8 @@ import styles from './${2:$1}.css';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
-		children: PropTypes.node,
-		className: PropTypes.string,
+		${2:children: PropTypes.node,
+		className: PropTypes.string,}
 	};
 
 	constructor(props) {
@@ -49,9 +49,9 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 
 	render() {
 		return (
-			<div className={styles.base}>
-				$3
-			</div>
+			<${3:div} className={styles.base}>
+				$0
+			</$3>
 		);
 	}
 }
@@ -64,17 +64,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './${2:$1}.css';
 
-function ${1:`!v expand('%:t:r')`}(${3:{...props}}) {
+function ${1:`!v expand('%:t:r')`}({ $3 }) {
 	return (
-		<div className={styles.base}>
-			$4
-		</div>
+		<${5:div} className={styles.base}>
+			$0
+		</$5>
 	);
 }
 
-$1.defaultProps = {};
+$1.defaultProps = {$4};
 
-$1.propTypes = {};
+$1.propTypes = {`!p
+props = t[3]
+
+if props:
+  snip >> 1
+  for prop in props.split(', '):
+    snip += prop + ': PropTypes.any,'
+`
+};
 
 export default $1;
 endsnippet
