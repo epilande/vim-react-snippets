@@ -118,3 +118,9 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 | `cn→`    | `className` |
 | `ref→`   | `ref` |
 | `pp→`    | `${props => props}` |
+
+#### Hooks
+
+| Trigger  | Content |
+| -------: | ------- |
+| `useState` | `const [var, setvar] = useState(''); |
