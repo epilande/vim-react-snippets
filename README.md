@@ -123,4 +123,4 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 
 | Trigger  | Content |
 | -------: | ------- |
-| `useState` | `const [var, setvar] = useState(''); |
+| `us.s` | `const [var, setvar] = useState(''); |
