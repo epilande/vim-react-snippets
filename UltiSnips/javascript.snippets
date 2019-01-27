@@ -266,5 +266,5 @@ isRequired,
 endsnippet
 
 snippet us.s "useState" w
-const [$1, use$1] = useState(${3:''});
+const [$1, use${1/\w+\s*/\u$0/g}] = useState(${3:''});
 endsnippet
