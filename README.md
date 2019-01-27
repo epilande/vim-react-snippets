@@ -123,4 +123,11 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 
 | Trigger  | Content |
 | -------: | ------- |
-| `us.s` | `const [var, setvar] = useState(''); |
+| `us.s`  | `const [state, setState] = useState('');` |
+| `us.e`  | `useEffect(() => { });`                   |
+| `us.er` | `useEffect(() => { return () => {}; });`  |
+| `us.er` | `useEffect(() => { return () => {}; });`  |
+| `us.c`  | `const context = useContext(ctx);`        |
+| `us.r`  | `const [store, dispatch] = useReducer(storeReducer, initialState);` |
+| `us.cb` | `useCallback(() => {  }, []);` |
+| `us.m`  | `const memo = useMemo(() => {  }, []);` |
