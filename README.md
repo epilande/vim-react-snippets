@@ -1,3 +1,4 @@
+self: false,
 # Vim React Snippets
 
 A Vim snippet library for React in ES6. You may also want to check out [vim-es2015-snippets](https://github.com/epilande/vim-es2015-snippets).
@@ -125,7 +126,6 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 | -------: | ------- |
 | `us.s`  | `const [state, setState] = useState('');` |
 | `us.e`  | `useEffect(() => { });`                   |
-| `us.er` | `useEffect(() => { return () => {}; });`  |
 | `us.er` | `useEffect(() => { return () => {}; });`  |
 | `us.c`  | `const context = useContext(ctx);`        |
 | `us.r`  | `const [store, dispatch] = useReducer(storeReducer, initialState);` |
