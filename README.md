@@ -1,4 +1,3 @@
-self: false,
 # Vim React Snippets
 
 A Vim snippet library for React in ES6. You may also want to check out [vim-es2015-snippets](https://github.com/epilande/vim-es2015-snippets).
@@ -39,14 +38,17 @@ rfc<C-l>
 Will expand to
 
 ```javascript
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './ListItem.css';
 
-const ListItem = ({ ...props }) => (
-  <div className={styles.base}>
+function ListItem({ ...props }) {
+  return (
+    <div className={styles.base}>
 
-  </div>
-);
+    </div>
+  );
+}
 
 ListItem.defaultProps = {
 };
@@ -124,10 +126,10 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 
 | Trigger  | Content |
 | -------: | ------- |
-| `us.s`  | `const [state, setState] = useState('');` |
-| `us.e`  | `useEffect(() => { });`                   |
-| `us.er` | `useEffect(() => { return () => {}; });`  |
-| `us.c`  | `const context = useContext(ctx);`        |
-| `us.r`  | `const [store, dispatch] = useReducer(storeReducer, initialState);` |
-| `us.cb` | `useCallback(() => {  }, []);` |
-| `us.m`  | `const memo = useMemo(() => {  }, []);` |
+| `us.s→`  | `const [state, setState] = useState('');` |
+| `us.e→`  | `useEffect(() => { });`                   |
+| `us.er→` | `useEffect(() => { return () => {}; });`  |
+| `us.c→`  | `const context = useContext(ctx);`        |
+| `us.r→`  | `const [store, dispatch] = useReducer(storeReducer, initialState);` |
+| `us.cb→` | `useCallback(() => {  }, []);` |
+| `us.m→`  | `const memo = useMemo(() => {  }, []);` |
